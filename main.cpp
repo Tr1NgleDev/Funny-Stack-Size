@@ -35,9 +35,9 @@ DWORD WINAPI Main_Thread(void* hModule)
 	glewInit();
 
 	// Hook to the MaterialItem::getStackLimit function
-	Hook(reinterpret_cast<void*>(base + idaOffsetFix(0x16A60)), reinterpret_cast<void*>(&MaterialItem_getStackLimit_H), NULL);
+	Hook(reinterpret_cast<void*>(base + idaOffsetFix(0x16900)), reinterpret_cast<void*>(&MaterialItem_getStackLimit_H), NULL);
 	// Hook to the ToolItem::getStackLimit function
-	Hook(reinterpret_cast<void*>(base + idaOffsetFix(0x9DD00)), reinterpret_cast<void*>(&ToolItem_getStackLimit_H), NULL);
+	Hook(reinterpret_cast<void*>(base + idaOffsetFix(0x9C3A0)), reinterpret_cast<void*>(&ToolItem_getStackLimit_H), NULL);
 
 	EnableHook(0);
 	return true;
